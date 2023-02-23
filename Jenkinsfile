@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script{
                     withDockerRegistry(credentialsId: 'Docker') {
-                        docker.build('bjgomes/flaskapp').push('latest')
+                        docker.build('omerdl/flaskapp').push('latest')
                     }
                 }
             }
