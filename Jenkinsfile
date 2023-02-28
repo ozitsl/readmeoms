@@ -39,7 +39,7 @@ pipeline {
                     withAWS(credentials: 'jenkinsawsaccess', region: 'us-east-1') {
                         try {
                             sh 'kubectl apply -f manifest.yaml'
-                            sh 'kubectl rollout restart deployment flask-deployment'
+                            sh 'kubectl rollout restart deployment flask-deployment -n olevy-namespace'
                         } catch (Exception e) {
                             echo 'Exception occured: ' + e.toString()
                             echo 'Handled the Exception!'

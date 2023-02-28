@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: omerdl/jenkins_docker_tryout
+        image: omerdl/flaskapp
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
